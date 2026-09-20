@@ -1,0 +1,12 @@
+用户端（前台首页、招聘信息浏览、求职者/企业注册登录、投简历、面试等）为后端 JSP 页面，完整保留在 1.JavaSSM/src/main/webapp/front/ 中，随 war 包一起部署，由 Tomcat 直接托管，无需单独启动任何前端服务。
+
+使用方法：
+1. 先导入 4.MysqlDatabase 中的 jspm9k90a2eb.sql（库名 jspm9k90a2eb），并确认 1.JavaSSM/src/main/resources/config.properties 中的数据库账号密码与本机一致（本项目已按 root/root 配置）
+2. 在 1.JavaSSM 下执行 mvn -DskipTests package，把 target/jspm9k90a2eb.war 放入 Tomcat9 的 webapps 目录后 startup.bat 启动
+3. 浏览器访问前台首页 http://localhost:8080/jspm9k90a2eb/front/index.jsp
+   求职者注册页 http://localhost:8080/jspm9k90a2eb/front/pages/qiuzhizhe/register.jsp
+   前台登录页 http://localhost:8080/jspm9k90a2eb/front/pages/login/login.jsp
+   后台登录页 http://localhost:8080/jspm9k90a2eb/jsp/login.jsp
+   体验账号：求职者 账号1/123456（前后台均可登录），企业 企业账号1/123456（后台登录）
+   ⚠️ 源码 jsp/utils/baseUrl.jsp 与 front/js/config.js 中硬编码了 http://localhost:8080/jspm9k90a2eb/，
+      若修改过 Tomcat 端口或上下文名，请同步修改这两处，否则页面接口会 404

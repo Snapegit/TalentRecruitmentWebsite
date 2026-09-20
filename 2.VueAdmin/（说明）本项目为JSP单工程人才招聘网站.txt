@@ -1,0 +1,5 @@
+本项目为基于 SSM + JSP/layui 的人才招聘网站单工程（管理端与用户端页面全部是后端 src/main/webapp 下的 JSP），无独立 Vue 管理端。
+
+所有代码完整保留在 1.JavaSSM 中：后台（管理员/企业/求职者登录后的管理界面）为 src/main/webapp/jsp/ 与 src/main/webapp/index.jsp，菜单定义在 src/main/webapp/jsp/utils/menu.jsp；打包 war 部署到 Tomcat9（上下文名保持 jspm9k90a2eb）后浏览器访问 http://localhost:8080/jspm9k90a2eb/jsp/login.jsp 即可进入后台登录页（三角色单选：管理员 / 求职者 / 企业，需先选角色再登录）。
+
+管理员账号 admin/admin，企业账号 企业账号1/123456，求职者账号 账号1/123456。
